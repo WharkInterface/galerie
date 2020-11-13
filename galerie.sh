@@ -15,22 +15,12 @@ shopt -s -o nounset # Oblige la déclaration de variables.
 #Traitements
 
 # Si le dossier "miniatures" n'existe pas, alors on effectue sa création.
-
 if [ ! -e "miniatures" ] 
 then
     mkdir miniatures
 fi
 
-# On fait une boucle qui converti toutes les images qui sont au format (jpg, png) depuis le dossier courant jusqu'au dossier de destination, miniatures en l'occurance, puis on affiche le nom de l'image avec comme message "success" qui indique que la conversion s'est effecuté sans problèmes.
-
-for I in *.{jpg,png}
-do
-convert -thumbnail "300x300" $I miniatures/$I
-echo $I success
-done
-
 # Génération du fichier HTML.
-
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,11 +30,13 @@ echo '<!DOCTYPE html>
 </head>
 <body>' > "miniatures.html"
 
-# On fait une boucle qui affiche toutes les miniatures au format (jpg, png) depuis le dossier "miniatures".
 
-for I in *.{jpg,png}
+# Boucle qui converti les fichiers *.{jpg,png,jpeg,gif} en miniature de taille "300x300" pixels. Puis, cröation d'un lien dans la page HTML pour chaque image pour pouvoir avoir un aperçu sur une page entiüre de l'image.
+for I in *.{jpg,png,jpeg,gif}
 do
-echo "<a href="$I"><img src=\"miniatures/$I\"></a>" >> "miniatures.html"
+convert -thumbnail "300x300" "$I" miniatures/"$I"
+echo $I success
+echo "<a href='"$I"'><img src=\"miniatures/$I\"></a>" >> "miniatures.html"
 done
 echo "</body>
 </html>" >> "miniatures.html"
