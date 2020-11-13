@@ -21,7 +21,7 @@ Pour commencer, asseurez-vous d'avoir un sous-système Linux tel que Ubuntu /ope
 
 # Images
 
-Prenez autant d'images que vous le souhaitez, et mettez-les dans le dossier galerie.
+Prenez autant d'images (au format .jpg ou .png) que vous le souhaitez, et mettez-les dans le dossier nommé "galerie".
 
 # Lancement
 
@@ -29,4 +29,4 @@ Lancez votre sous-système Linux. Dirigez-vous dans le dossier galerie à l'aide
 
 # Finalisation
 
-Une fois que vous avez effectuer tout cela, des miniatures sous résolution avec une largeur de 1280 pixels auront étaient créer dans le sous-dossier miniatures, puis les images seront affichés sur la page miniatures.html. Il suffit donc de l'ouvrir pour voir le résultat dessus.
+Une fois que vous avez effectuer tout cela, des miniatures sous résolution 300x300 pixels auront étaient créer dans le sous-dossier miniatures, puis les images seront affichés sur la page miniatures.html. Il suffit donc de l'ouvrir pour voir le résultat dessus.
