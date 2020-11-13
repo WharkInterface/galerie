@@ -1,7 +1,10 @@
 # Documentation : Galerie
 Description : Documentation sur le script permettant la génération de miniatures à partir d'images et un fichier HTML présentant toutes les images du dossier. 
+#
 Date : 13/11/2020
+#
 Version : 1.0
+#
 Auteur : Alexandre PINTRAND (CFPTi)
 
 # Garerie
