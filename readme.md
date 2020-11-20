@@ -21,7 +21,7 @@ Pour commencer, asseurez-vous d'avoir un sous-système Linux tel que Ubuntu /ope
 
 # Images
 
-Prenez autant d'images (au format .jpg ou .png) que vous le souhaitez, et mettez-les dans le dossier nommé "galerie".
+Prenez autant d'images (au format *.jpg ou png ou jpeg ou gif) que vous le souhaitez, et mettez-les dans le dossier nommé "galerie".
 
 # Lancement
 
