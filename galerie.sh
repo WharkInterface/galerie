@@ -3,7 +3,7 @@
 # Script : Galerie
 # Description : Génération de miniatures à partir de ces derniers et un fichier HTML présentant toutes les images du dossier. 
 #
-# Date : 13/11/2020
+# Date : 20/11/2020
 # Version : 1.0
 # Auteur : Alexandre PINTRAND (CFPTi)
 #****
@@ -31,11 +31,14 @@ echo '<!DOCTYPE html>
 <body>' > "miniatures.html"
 
 
-# Boucle qui converti les fichiers *.{jpg,png,jpeg,gif} en miniature de taille "300x300" pixels. Puis, cröation d'un lien dans la page HTML pour chaque image pour pouvoir avoir un aperçu sur une page entiüre de l'image.
+# Boucle qui converti les fichiers *.{jpg,png,jpeg,gif} en miniature de taille "300x300" pixels (uniquement si l'extension existe dans le dossier). Puis, création d'un lien dans la page HTML pour chaque image pour pouvoir avoir un aperçu sur une page entiüre de l'image.
 for I in *.{jpg,png,jpeg,gif}
 do
-convert -thumbnail "300x300" "$I" miniatures/"$I"
-echo $I success
+if [ -e "$I" ]
+then
+    convert -thumbnail "300x300" "$I" miniatures/"$I"
+    echo "$I success."
+fi
 echo "<a href='"$I"'><img src=\"miniatures/$I\"></a>" >> "miniatures.html"
 done
 echo "</body>
