@@ -11,6 +11,10 @@ Version : 1.0
 #
 Auteur : Alexandre PINTRAND (CFPTi)
 
+# Journal de bord du projet
+
+[a link](https://docs.google.com/spreadsheets/d/1CEWMa8Q5Ntj9QwB1T5L3IaFpZ10Gf5WDBh646Vyu42I/edit?usp=sharing)
+
 # Présentation du script
 
 Le script "galerie.sh" est un programme qui permet de générer des miniatures à partir d'images qui ont étaient saubegardé dans un dossier. Le script génère aussi un fichier HTML qui contient les miniatures. On peut cliquer sur les images pour avoir un aperçu complet de la miniature sur laquelle on clique.
