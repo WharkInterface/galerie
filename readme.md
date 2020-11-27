@@ -13,7 +13,7 @@ Auteur : Alexandre PINTRAND (CFPTi)
 
 # Journal de bord du projet
 
-[a link](https://docs.google.com/spreadsheets/d/1CEWMa8Q5Ntj9QwB1T5L3IaFpZ10Gf5WDBh646Vyu42I/edit?usp=sharing)
+[Google Sheet Page](https://docs.google.com/spreadsheets/d/1CEWMa8Q5Ntj9QwB1T5L3IaFpZ10Gf5WDBh646Vyu42I/edit?usp=sharing)
 
 # Présentation du script
 
