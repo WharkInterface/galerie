@@ -38,8 +38,8 @@ if [ -e "$I" ]
 then
     convert -thumbnail "300x300" "$I" miniatures/"$I"
     echo "$I success."
+    echo "<a href='"$I"'><img src=\"miniatures/$I\" alt=""></a>" >> "miniatures.html"
 fi
-echo "<a href='"$I"'><img src=\"miniatures/$I\"></a>" >> "miniatures.html"
 done
 echo "</body>
 </html>" >> "miniatures.html"
