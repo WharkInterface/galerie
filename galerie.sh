@@ -32,14 +32,16 @@ echo '<!DOCTYPE html>
 
 
 # Boucle qui converti les fichiers *.{jpg,png,jpeg,gif} en miniature de taille "300x300" pixels (uniquement si l'extension existe dans le dossier). Puis, création d'un lien dans la page HTML pour chaque image pour pouvoir avoir un aperçu sur une page entiüre de l'image.
-for I in *.{jpg,png,jpeg,gif}
+for I in *.{jpg,png,jpeg,gif,JPG}
 do
-if [ -e "$I" ]
-then
-    convert -thumbnail "300x300" "$I" miniatures/"$I"
-    echo "$I success."
-    echo "<a href='"$I"'><img src=\"miniatures/$I\" alt=""></a>" >> "miniatures.html"
-fi
+    if [ -e "$I" ]
+    then
+        convert -thumbnail "300x300" "$I" miniatures/"$I"
+        echo "$I success."
+        echo "<a href='"$I"'><img src=\"miniatures/$I\" alt=""></a>" >> "miniatures.html"
+    else # Sinon
+        echo "Aucun fichier avec l'extension $I n'a été trouvé dans le dossier miniatures." # On indique à l'utilisateur qu'il n'y a pas d'image en précisant les extensions.
+    fi
 done
 echo "</body>
 </html>" >> "miniatures.html"
